@@ -325,7 +325,7 @@ ChainComplexOfCover:=function(Y,G,H)
 						newG:=
 						delta1[Position(0delta1, inter[1])][2];
 						Add(jigsaw,
-						[neighbour[1],h*newG*neighbour[2]]
+						[neighbour[1],neighbour[2]*(h^-1)*newG]
 						);
 					fi;
 					if Length(jigsaw)>tick
@@ -389,10 +389,17 @@ ChainComplexOfCover:=function(Y,G,H)
 end;
 ####################################################################
 ####################################################################
-# Test complex
+# Test complexes
+# trefoil knot complement
 K:=PureCubicalKnot(3,1);;
 K:=PureComplexComplement(K);;
-Y:=RegularCWComplex(K);;
+K:=RegularCWComplex(K);;
 G:=FundamentalGroupOfRegularCWComplex(Y, "no");;
-H:=LowIndexSubgroupsFpGroup(G,5);
-H:=H[5];
+H:=LowIndexSubgroupsFpGroup(G,5);;
+# torus
+A:=[[1,1,1],[1,0,1],[1,1,1]];;
+S:=PureCubicalComplex(A);;
+T:=DirectProduct(S,S);;
+T:=RegularCWComplex(T);;
+G2:=FundamentalGroupOfRegularCWComplex(T, "no");;
+H2:=LowIndexSubgroupsFpGroup(G2,5);;
