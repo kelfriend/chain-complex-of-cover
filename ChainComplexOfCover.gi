@@ -1,4 +1,3 @@
-LoadPackage("HAP");
 #############################Input##################################
 ########### Y: a regular CW-complex ################################
 ########### G: the fundamental group of Y ("nosimplify") ###########
