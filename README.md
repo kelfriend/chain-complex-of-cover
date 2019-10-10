@@ -1,1 +1,1 @@
-# functional version is in the latest release of HAP ¯\\_(ツ)_/¯
+# This method of calculating the chain complex of a cover of some space was abandoned in favour of a method that does not directly compute with group elements (that version is in the latest release of HAP ¯\\_(ツ)_/¯)
